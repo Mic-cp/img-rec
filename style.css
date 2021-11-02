@@ -1,0 +1,11 @@
+body{
+    background-color: lavenderblush;
+}
+#img_r{
+    width: 1000px;
+    height: 50px;
+    font-size: 30px;
+}
+.name_of_objects{
+    color: magenta;
+}
