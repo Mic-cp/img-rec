@@ -27,3 +27,23 @@ function modelLoaded()
 {
     console.log("modelLoaded")
 }
+
+function Check()
+{
+    img=document.getElementById('captured_image');
+    console.log(classifier)
+    classifier.classify(img, gotResult);
+    console.log('checked')
+}
+
+function gotResult(error, results)
+{
+    console.log('results')
+    if (error) {
+        console.error(error)
+    } else{
+        console.log(results)
+        document.getElementById("result_object_name").innerHTML=results[0].label;
+        document.getElementById("result_object_accuracy").innerHTML=results[0].confidence.toFixed(3);
+    }
+}
